@@ -3,19 +3,25 @@ lockfileVersion: 5.4
 specifiers:
   '@heroicons/react': ^1.0.6
   autoprefixer: ^10.4.7
+  dotenv: ^16.0.1
   eslint: 8.20.0
   eslint-config-next: 12.2.2
   next: 12.2.2
   postcss: ^8.4.14
   react: 18.2.0
   react-dom: 18.2.0
+  react-flip-move: ^3.0.4
+  tailwind-scrollbar-hide: ^1.1.7
   tailwindcss: ^3.1.6
 
 dependencies:
   '@heroicons/react': 1.0.6_react@18.2.0
+  dotenv: 16.0.1
   next: 12.2.2_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-flip-move: 3.0.4_biqbaboplfbrettd7655fr4n2y
+  tailwind-scrollbar-hide: 1.1.7
 
 devDependencies:
   autoprefixer: 10.4.7_postcss@8.4.14
@@ -650,6 +656,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv/16.0.1:
+    resolution: {integrity: sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /electron-to-chromium/1.4.196:
     resolution: {integrity: sha512-uxMa/Dt7PQsLBVXwH+t6JvpHJnrsYBaxWKi/J6HE+/nBtoHENhwBoNkgkm226/Kfxeg0z1eMQLBRPPKcDH8xWA==}
@@ -1774,6 +1785,16 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-flip-move/3.0.4_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-HyUVv9g3t/BS7Yz9HgrtYSWyRNdR2F81nkj+C5iRY675AwlqCLB5JU9mnZWg0cdVz7IM4iquoyZx70vzZv3Z8Q==}
+    peerDependencies:
+      react: '>=16.3.x'
+      react-dom: '>=16.3.x'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
@@ -1978,6 +1999,10 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /tailwind-scrollbar-hide/1.1.7:
+    resolution: {integrity: sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==}
+    dev: false
 
   /tailwindcss/3.1.6:
     resolution: {integrity: sha512-7skAOY56erZAFQssT1xkpk+kWt2NrO45kORlxFPXUt3CiGsVPhH1smuH5XoDH6sGPXLyBv+zgCKA2HWBsgCytg==}
