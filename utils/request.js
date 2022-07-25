@@ -46,4 +46,8 @@ export default {
     title: "TV Movies",
     url: `/discover/movie?api_key=${API_KEY}&with_genres=10770&page=3`,
   },
+  trailer:{
+    title: "Trailer",
+    url:"/movie/20/videos?api_key=7e0ed1c827914822a88f63009cc92e70&language=en-US"
+  }
 };

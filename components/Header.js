@@ -8,6 +8,10 @@ import {
   LightningBoltIcon,
   CollectionIcon,
 } from "@heroicons/react/outline";
+import AccountMenu from "./DropDownMeuItems";
+
+
+
 function Header() {
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
@@ -19,13 +23,16 @@ function Header() {
         <HeaderItem title="SEARCH" Icon={SearchIcon} />
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
-      <Image
+     <div className="flex items-center">
+     <Image
         className="object-contain"
         src={"https://links.papareact.com/ua6"}
         height={100}
         width={200}
         alt={"logo"}
       />
+      <AccountMenu/>
+     </div>
     </header>
   );
 }

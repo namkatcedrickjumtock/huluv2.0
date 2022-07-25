@@ -4,14 +4,22 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Results from "../components/Results";
 import Endpoints from "../utils/request";
+import { useSession} from "next-auth/react";
+import Login from "./Login";
+import { authOptions } from './api/auth/[...nextauth]'
+import { unstable_getServerSession } from "next-auth/next"
 
 export default function Home({ results }) {
+  const { data: session } = useSession();
+  // const [router] = useRouter()
+  if (!session) {
+    return <Login />;
+  }
   return (
     <div>
       <Head>
         <title>Hulu</title>
         <meta name="description" content="Hulu clone for viewing trailers" />
-        {/* <link rel="icon" href="https://links.papareact.com/ua6" />   */}
       </Head>
       <Header />
       <Nav />
@@ -23,6 +31,8 @@ export default function Home({ results }) {
 // runs before rednering data to the client
 export async function getServerSideProps(context) {
 
+  // getting user session
+  const session = await unstable_getServerSession(context.req, context.res, authOptions)
   // catch query param
   const genre = context.query.genre;
   const request = await fetch(
@@ -38,6 +48,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       results: request.results,
+      session
     },
   };
 }
