@@ -11,7 +11,7 @@ export default function Home({ results }) {
       <Head>
         <title>Hulu</title>
         <meta name="description" content="Hulu clone for viewing trailers" />
-        {/* <link rel="icon" href="https://links.papareact.com/ua6" />   */}
+        <link rel="icon" href="https://links.papareact.com/ua6" />  
       </Head>
       <Header />
       <Nav />

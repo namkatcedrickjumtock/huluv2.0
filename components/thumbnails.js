@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import { forwardRef } from "react";
+import { useRouter } from "next/router";
 
-// eslint-disable-next-line react/display-name
 const Thumbnails = forwardRef(({ result }, _ref) => {
   // console.log(result);
+
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
+
+  const router  = useRouter()
 
   return (
     <div
@@ -13,6 +16,7 @@ const Thumbnails = forwardRef(({ result }, _ref) => {
     transition duration-200 ease-in transform
     sm:hover:scale-105 hover:z-50
     "
+    onClick={()=>router.push(`/Movie_Details/${result.id}`)}
     >
       <Image
         src={
